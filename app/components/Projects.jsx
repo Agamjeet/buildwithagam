@@ -5,6 +5,15 @@ import Image from 'next/image';
 import RadialFillButton from './GsapButton';
 
 const projects = [
+  {
+    id: 9,
+    title: "IndicCore",
+    featured: true,
+    description: "An analytics-first mock test platform for UPSC, SSC, and State PSC aspirants. It goes beyond a score to show why marks are lost — weak topics, guessing patterns, and elimination mistakes — so the next revision is obvious. <span class='font-bold text-blue-600'>Recognised in YourStory's VibeCode30 2026 among the top 30 AI products in India</span>.",
+    technologies: ["AI", "Analytics", "Mock Tests", "EdTech"],
+    github: null,
+    live: "https://www.indiccore.com"
+  },
   { 
     id: 1, 
     title: "QuizKraft", 
@@ -98,19 +107,119 @@ const renderDescription = (description) => {
   });
 };
 
+function ProjectLinks({ project }) {
+  return (
+    <div className="flex gap-3 mt-auto">
+      {project.github && (
+        <RadialFillButton
+          text="GitHub"
+          startColor="#f8f9fa"
+          fillColor="#24292e"
+          textColor="#24292e"
+          fillTextColor="#ffffff"
+          size="small"
+          onClick={() => window.open(project.github, '_blank')}
+        />
+      )}
+      {project.live && (
+        <RadialFillButton
+          text="Live Demo"
+          startColor="#f8f9fa"
+          fillColor="#0066cc"
+          textColor="#0066cc"
+          fillTextColor="#ffffff"
+          size="small"
+          onClick={() => window.open(project.live, '_blank')}
+        />
+      )}
+    </div>
+  );
+}
+
+function FeaturedProject({ project }) {
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="mb-10 overflow-hidden rounded-2xl border-4 border-blue-500 bg-white shadow-xl"
+    >
+      <div className="grid lg:grid-cols-2">
+        <div className="relative flex min-h-72 flex-col justify-center gap-8 bg-[#f7f9fc] p-8 text-gray-900">
+          <div
+            className="pointer-events-none absolute inset-0 opacity-70"
+            style={{
+              backgroundImage:
+                "linear-gradient(to right, rgba(148,163,184,0.18) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.18) 1px, transparent 1px)",
+              backgroundSize: "28px 28px",
+            }}
+          />
+          <div className="relative flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-lg font-bold text-white">
+                I
+              </span>
+              <span className="text-lg font-semibold">IndicCore</span>
+            </div>
+            <span className="rounded-full bg-blue-600 px-3 py-1 text-xs font-semibold text-white">
+              Featured
+            </span>
+          </div>
+          <div className="relative">
+            <p className="mb-4 inline-flex rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700">
+              AI-powered govt exam prep
+            </p>
+            <h3 className="text-4xl font-bold leading-tight tracking-tight">
+              Crack any govt exam.
+              <span className="block text-gray-400">On your first try.</span>
+            </h3>
+          </div>
+        </div>
+
+        <div className="flex flex-col p-8">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-blue-600">
+            Main project
+          </p>
+          <h3 className="mb-4 text-3xl font-bold text-gray-800">{project.title}</h3>
+          <div className="mb-6 flex-grow leading-relaxed text-gray-600">
+            {renderDescription(project.description)}
+          </div>
+          <div className="mb-6 flex flex-wrap gap-2">
+            {project.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="rounded-full bg-blue-50 px-3 py-1 text-sm text-blue-700"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+          <ProjectLinks project={project} />
+        </div>
+      </div>
+    </motion.article>
+  );
+}
+
 export default function Projects() {
+  const featured = projects.find((project) => project.featured);
+  const otherProjects = projects.filter((project) => !project.featured);
+
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-gray-800">My Projects</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Here are some of the projects I've worked on recently.
+            Here are some of the projects I&apos;ve worked on recently.
           </p>
         </div>
 
+        {featured ? <FeaturedProject project={featured} /> : null}
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-          {projects.map((project, index) => (
+          {otherProjects.map((project, index) => (
               <motion.div
                 key={project.id}
               initial={{ opacity: 0, y: 20 }}
@@ -168,31 +277,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Links */}
-                <div className="flex gap-3 mt-auto">
-                  {project.github && (
-                    <RadialFillButton
-                      text="GitHub"
-                      startColor="#f8f9fa"
-                      fillColor="#24292e"
-                      textColor="#24292e"
-                      fillTextColor="#ffffff"
-                      size="small"
-                      onClick={() => window.open(project.github, '_blank')}
-                    />
-                  )}
-                  {project.live && (
-                    <RadialFillButton
-                      text="Live Demo"
-                      startColor="#f8f9fa"
-                      fillColor="#0066cc"
-                      textColor="#0066cc"
-                      fillTextColor="#ffffff"
-                      size="small"
-                      onClick={() => window.open(project.live, '_blank')}
-                    />
-                  )}
-                </div>
+                <ProjectLinks project={project} />
               </div>
               </motion.div>
           ))}

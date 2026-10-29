@@ -11,7 +11,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#36d1dc",
+};
+
 export const metadata = {
+  metadataBase: new URL("https://agamjeet.in"),
   title: "Agamjeet Singh Padda (Agam) | AI Developer & Data Scientist",
   description: "Agamjeet Singh Padda (Agam) - Expert AI Developer and Data Scientist specializing in Machine Learning, Deep Learning, and Data Science. Building innovative AI solutions and data-driven applications.",
   keywords: "Agamjeet Singh, Agamjeet, Agam, Agamjeet Singh Padda, AI Developer, Data Scientist, Machine Learning, Deep Learning, Python Developer, Data Science, Artificial Intelligence, ML Engineer, AI Engineer, Portfolio",
@@ -47,8 +54,6 @@ export const metadata = {
     apple: '/favi.png',
   },
   manifest: "/manifest.json",
-  themeColor: "#36d1dc",
-  viewport: "width=device-width, initial-scale=1.0",
   verification: {
     google: "googlef65beec6f0cd052f",
   },
