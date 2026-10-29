@@ -1,11 +1,17 @@
 "use client"
 import GsapButton from "./GsapButton";
 
+const links = [
+  ["#about", "About"],
+  ["#skills", "Skills"],
+  ["#services", "Services"],
+  ["#projects", "Projects"],
+];
+
 export default function Navbar() {
   return (
     <div className="navbar fixed top-0 left-0 w-full z-50 bg-base-100/70 backdrop-blur-md shadow-sm transition-shadow duration-300">
       <div className="navbar-start">
-        {/* Mobile Dropdown */}
         <div className="dropdown">
           <div
             tabIndex={0}
@@ -30,10 +36,9 @@ export default function Navbar() {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-3 shadow-lg bg-base-100/90 backdrop-blur-md rounded-box w-52 animate-fade-in"
           >
-            <li><NavLink href="#about">About</NavLink></li>
-            <li><NavLink href="#skills">Skills</NavLink></li>
-            <li><NavLink href="#projects">Projects</NavLink></li>
-            <li><NavLink href="#contact">Contact</NavLink></li>
+            {links.map(([href, label]) => (
+              <li key={href}><NavLink href={href}>{label}</NavLink></li>
+            ))}
           </ul>
         </div>
         <a
@@ -44,17 +49,14 @@ export default function Navbar() {
         </a>
       </div>
 
-      {/* Desktop Menu */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-2">
-          <li><NavLink href="#about">About</NavLink></li>
-          <li><NavLink href="#skills">Skills</NavLink></li>
-          <li><NavLink href="#projects">Projects</NavLink></li>
-          <li><NavLink href="#contact">Contact</NavLink></li>
+          {links.map(([href, label]) => (
+            <li key={href}><NavLink href={href}>{label}</NavLink></li>
+          ))}
         </ul>
       </div>
 
-      {/* Call to Action */}
       <div className="navbar-end">
         <a href="#contact" className="hover:scale-105 transition-transform">
           <GsapButton
@@ -68,7 +70,6 @@ export default function Navbar() {
         </a>
       </div>
 
-      {/* Custom Styles */}
       <style jsx>{`
         @keyframes fade-in {
           from {

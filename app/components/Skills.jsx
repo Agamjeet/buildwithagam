@@ -16,7 +16,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 relative overflow-hidden bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600">
+    <section id="skills" className="relative scroll-mt-24 overflow-hidden bg-gradient-to-br from-blue-400 via-blue-500 to-indigo-600 py-20">
       <AnimatedBackground />
       
       <div className="container mx-auto px-4 relative z-10">

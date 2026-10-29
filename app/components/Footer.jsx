@@ -1,12 +1,15 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+
+const RESUME =
+  "https://drive.google.com/file/d/1zC_cOOF1YzwwJQgd-NTtnMGX6O7qmgH_/view?usp=sharing";
 
 export default function Footer() {
   return (
-    <footer className="bg-white text-gray-800 border-t border-gray-200">
-      <div className="py-6 px-4 flex justify-center">
-        <motion.div 
+    <footer className="border-t border-gray-200 bg-white text-gray-800">
+      <div className="flex flex-col items-center gap-4 px-4 py-6">
+        <motion.div
           className="flex gap-6"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,6 +34,20 @@ export default function Footer() {
             color="from-gray-600 to-gray-800"
           />
         </motion.div>
+        <p className="text-center text-sm text-gray-500">
+          Agamjeet Singh Padda
+          <span className="mx-2 text-gray-300" aria-hidden="true">
+            /
+          </span>
+          <a
+            href={RESUME}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline decoration-gray-300 underline-offset-4 hover:text-gray-900"
+          >
+            Resume
+          </a>
+        </p>
       </div>
     </footer>
   );
@@ -43,16 +60,11 @@ function SocialIcon({ href, label, svgPath, color }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className={`btn btn-circle bg-gradient-to-r ${color} border-0 text-white shadow-md hover:shadow-lg transition-all duration-300 w-14 h-14`} // bigger buttons
+      className={`btn btn-circle h-14 w-14 border-0 bg-gradient-to-r text-white shadow-md ${color}`}
       whileHover={{ scale: 1.15 }}
       whileTap={{ scale: 0.95 }}
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        className="h-6 w-6" // bigger icon
-        fill="currentColor"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
         <path d={svgPath} />
       </svg>
     </motion.a>

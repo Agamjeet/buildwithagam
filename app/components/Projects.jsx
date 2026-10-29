@@ -353,7 +353,7 @@ export default function Projects() {
   const otherProjects = projects.filter((project) => !project.featured);
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="scroll-mt-24 py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 text-gray-800">My Projects</h2>

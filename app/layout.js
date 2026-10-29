@@ -19,34 +19,34 @@ export const viewport = {
 
 export const metadata = {
   metadataBase: new URL("https://agamjeet.in"),
-  title: "Agamjeet Singh Padda (Agam) | AI Developer & Data Scientist",
-  description: "Agamjeet Singh Padda (Agam) - Expert AI Developer and Data Scientist specializing in Machine Learning, Deep Learning, and Data Science. Building innovative AI solutions and data-driven applications.",
-  keywords: "Agamjeet Singh, Agamjeet, Agam, Agamjeet Singh Padda, AI Developer, Data Scientist, Machine Learning, Deep Learning, Python Developer, Data Science, Artificial Intelligence, ML Engineer, AI Engineer, Portfolio",
+  title: "Agamjeet Singh | Web, SaaS, AI, Automation, Voice",
+  description: "Websites, SaaS products, AI and SaaS consultation, automation, and voice AI. Agamjeet Singh builds the product and the systems around it.",
+  keywords: "Agamjeet Singh, Agamjeet Singh Padda, web development, SaaS, AI consultation, automation, voice AI, WhatsApp automation, IndicCore",
   authors: [{ name: "Agamjeet Singh Padda" }],
   creator: "Agamjeet Singh Padda",
   publisher: "Agamjeet Singh Padda",
   robots: "index, follow",
   openGraph: {
     type: "website",
-    title: "Agamjeet Singh Padda | AI Developer & Data Scientist",
-    description: "Expert AI Developer and Data Scientist specializing in Machine Learning, Deep Learning, and Data Science. Building innovative AI solutions and data-driven applications.",
+    title: "Agamjeet Singh | Web, SaaS, AI, Automation, Voice",
+    description: "Websites, SaaS products, AI and SaaS consultation, automation, and voice AI.",
     url: "https://agamjeet.in",
-    siteName: "Agamjeet Singh Padda Portfolio",
+    siteName: "Agamjeet Singh",
     images: [
       {
-        url: "/ME.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Agamjeet Singh Padda - AI Developer & Data Scientist",
+        url: "/me-4.jpeg",
+        width: 1563,
+        height: 1600,
+        alt: "Agamjeet Singh Padda",
       },
     ],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agamjeet Singh Padda | AI Developer & Data Scientist",
-    description: "Expert AI Developer and Data Scientist specializing in Machine Learning, Deep Learning, and Data Science. Building innovative AI solutions and data-driven applications.",
-    images: ["/ME.jpg"],
+    title: "Agamjeet Singh | Web, SaaS, AI, Automation, Voice",
+    description: "Websites, SaaS products, AI and SaaS consultation, automation, and voice AI.",
+    images: ["/me-4.jpeg"],
     creator: "@Agam_io",
   },
   icons: {
@@ -61,7 +61,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" data-theme="light" className="scroll-smooth">
       <head>
         <link rel="icon" href="/favi.png" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -77,9 +77,9 @@ export default function RootLayout({ children }) {
               "name": "Agamjeet Singh Padda",
               "alternateName": ["Agam", "Agamjeet", "Agamjeet Singh"],
               "url": "https://agamjeet.in",
-              "jobTitle": "AI Developer & Data Scientist",
-              "description": "Expert AI Developer and Data Scientist specializing in Machine Learning, Deep Learning, and Data Science",
-              "knowsAbout": ["Machine Learning", "Deep Learning", "Data Science", "Artificial Intelligence", "Python", "SQL"],
+              "jobTitle": "Web, SaaS, and AI builder",
+              "description": "Builds websites, SaaS products, AI and SaaS consultation, automation, and voice AI",
+              "knowsAbout": ["Web development", "SaaS", "AI consultation", "Automation", "Voice AI", "Artificial Intelligence"],
               "sameAs": [
                 "https://x.com/Agam_io",
                 "https://www.linkedin.com/in/agamjeet-padda/",
