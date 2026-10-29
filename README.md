@@ -9,7 +9,7 @@ A modern, interactive portfolio website showcasing AI development and data scien
 - **Advanced Animations**: GSAP-powered animations and Framer Motion transitions
 - **Responsive Design**: Mobile-first approach with Tailwind CSS and DaisyUI
 - **SEO Optimized**: Complete SEO setup with structured data, sitemaps, and metadata
-- **Performance Focused**: Static export for optimal loading times
+- **Performance Focused**: Production Next.js build, hosted on Vercel
 
 ## 🛠️ Technologies & Libraries
 
@@ -32,7 +32,7 @@ A modern, interactive portfolio website showcasing AI development and data scien
 - **ESLint Config Next 15.4.6**: Next.js specific ESLint rules
 
 ### Deployment
-- **@netlify/plugin-nextjs 5.12.1**: Netlify plugin for Next.js optimization
+- **Vercel**: Hosting for the Next.js app
 
 ## 📁 Project Structure
 
@@ -148,7 +148,7 @@ pnpm dev
 npm run build
 ```
 
-This creates an optimized static export in the `out/` directory.
+Vercel runs this build automatically. Locally it writes the production output to `.next/`.
 
 ## 📱 Component Breakdown
 
@@ -173,16 +173,18 @@ This creates an optimized static export in the `out/` directory.
 
 ## 🌐 Deployment
 
-### Netlify (Recommended)
-The site is configured for Netlify deployment:
-- Automatic builds from Git
-- Next.js optimization plugin
-- Static export for best performance
-- Custom domain support
+### Vercel
+The site is a standard Next.js app, which Vercel detects automatically:
+
+- Framework preset: Next.js
+- Build command: `npm run build`
+- Install command: `npm install`
+- Leave the output directory empty so Vercel uses the Next.js default
+
+Google Search Console can verify the domain from `public/googlef65beec6f0cd052f.html`, which is served at `/googlef65beec6f0cd052f.html`. The same token is also set in `app/layout.js` as a `google-site-verification` meta tag.
 
 ### Configuration Files
-- `netlify.toml`: Netlify-specific build settings
-- `next.config.mjs`: Next.js configuration with static export
+- `next.config.mjs`: Next.js configuration
 
 ## 🔧 Customization
 
@@ -203,8 +205,8 @@ The site is configured for Netlify deployment:
 
 ## 📊 Performance Features
 
-- **Static Export**: Pre-rendered pages for instant loading
-- **Image Optimization**: Next.js image optimization (disabled for static export)
+- **Next.js rendering**: Production build optimized by Vercel
+- **Image Optimization**: Next.js image optimization on Vercel
 - **Code Splitting**: Automatic code splitting by Next.js
 - **Lazy Loading**: Components load as needed
 - **Optimized Fonts**: Google Fonts with Next.js font optimization

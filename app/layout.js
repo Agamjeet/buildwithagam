@@ -50,7 +50,7 @@ export const metadata = {
   themeColor: "#36d1dc",
   viewport: "width=device-width, initial-scale=1.0",
   verification: {
-    google: "your-google-verification-code",
+    google: "googlef65beec6f0cd052f",
   },
 };
 
