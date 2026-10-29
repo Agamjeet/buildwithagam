@@ -14,7 +14,7 @@ A modern, interactive portfolio website showcasing AI development and data scien
 ## 🛠️ Technologies & Libraries
 
 ### Core Framework
-- **Next.js 15.4.6**: React framework for production with App Router
+- **Next.js 15.5.28**: React framework for production with App Router
 - **React 19.1.0**: Latest React with concurrent features
 - **React DOM 19.1.0**: React rendering library
 
@@ -29,7 +29,7 @@ A modern, interactive portfolio website showcasing AI development and data scien
 
 ### Development Tools
 - **ESLint 9**: Code linting for consistent code quality
-- **ESLint Config Next 15.4.6**: Next.js specific ESLint rules
+- **ESLint Config Next 15.5.28**: Next.js specific ESLint rules
 
 ### Deployment
 - **Vercel**: Hosting for the Next.js app
@@ -37,7 +37,7 @@ A modern, interactive portfolio website showcasing AI development and data scien
 ## 📁 Project Structure
 
 ```
-bday/
+buildwithagam/
 ├── app/                          # Next.js App Router
 │   ├── components/              # React components
 │   │   ├── About.jsx           # About section component
@@ -118,8 +118,8 @@ bday/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Agamjeet/bday.git
-cd bday
+git clone https://github.com/Agamjeet/PORTFOLIO_NEW.git buildwithagam
+cd buildwithagam
 ```
 
 2. Install dependencies:
