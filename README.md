@@ -1,6 +1,6 @@
-# Agamjeet Singh Padda - Portfolio Website
+# Build with Agam
 
-A modern, interactive portfolio website showcasing AI development and data science expertise. Built with Next.js and featuring advanced animations, interactive project cards, and comprehensive SEO optimization.
+Agamjeet Singh Padda's portfolio. A modern, interactive site showcasing AI development and data science work, built with Next.js.
 
 ## 🌟 Features
 
@@ -118,7 +118,7 @@ buildwithagam/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Agamjeet/PORTFOLIO_NEW.git buildwithagam
+git clone https://github.com/Agamjeet/buildwithagam.git
 cd buildwithagam
 ```
 
