@@ -48,9 +48,9 @@ function EmailPopup({ onClose }) {
         <div className="mt-6 flex justify-center">
           <GsapButton
             text="Open mail app"
-            startColor="#ffffff"
+            startColor="#dbeafe"
             fillColor="#3b82f6"
-            textColor="#3b82f6"
+            textColor="#1d4ed8"
             fillTextColor="#ffffff"
             onClick={() => {
               window.location.href = `mailto:${EMAIL}`;
