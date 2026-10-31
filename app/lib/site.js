@@ -20,9 +20,9 @@ export const pages = [
   },
   {
     path: "/about",
-    title: "About Agamjeet Singh Padda (Agam)",
+    title: "About Agam",
     description:
-      "Agamjeet Singh Padda, also called Agam, Agamjeet, and Agam Jeet Singh Padda, runs buildwithagam.",
+      "I'm Agam. I run buildwithagam — websites, SaaS, AI, automation, and voice AI for clients worldwide.",
   },
   {
     path: "/services",

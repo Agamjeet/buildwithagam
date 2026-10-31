@@ -12,8 +12,7 @@ export default function About() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-gray-700">
-              I&apos;m <strong>Agamjeet Singh Padda</strong> — Agam, Agamjeet, or Agam Jeet Singh.
-              I run <strong>buildwithagam</strong>.
+              I&apos;m <strong>Agam</strong>. I run <strong>buildwithagam</strong>.
             </p>
             <p className="text-lg leading-relaxed text-gray-700">
               I&apos;m an AI engineer and freelance developer. I work remotely with clients
@@ -29,7 +28,7 @@ export default function About() {
           <div className="flex justify-center">
             <div className="avatar">
               <div className="w-64 rounded-full ring ring-blue-500 ring-offset-4 ring-offset-white overflow-hidden shadow-2xl">
-                <Image src="/me-4.jpeg" alt="Agamjeet Singh Padda, also known as Agam" width={256} height={256} className="h-64 w-64 object-cover object-[center_20%]" />
+                <Image src="/me-4.jpeg" alt="Agam" width={256} height={256} className="h-64 w-64 object-cover object-[center_20%]" />
               </div>
             </div>
           </div>
