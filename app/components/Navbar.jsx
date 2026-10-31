@@ -2,10 +2,10 @@
 import GsapButton from "./GsapButton";
 
 const links = [
-  ["#about", "About"],
-  ["#skills", "Skills"],
-  ["#services", "Services"],
-  ["#projects", "Projects"],
+  ["/about", "About"],
+  ["/#skills", "Skills"],
+  ["/services", "Services"],
+  ["/projects", "Projects"],
 ];
 
 export default function Navbar() {
@@ -43,9 +43,9 @@ export default function Navbar() {
         </div>
         <a
           className="btn btn-ghost text-xl font-bold hover:scale-105 transition-transform"
-          href="#top"
+          href="/"
         >
-          Agamjeet Singh
+          buildwithagam
         </a>
       </div>
 
@@ -58,7 +58,7 @@ export default function Navbar() {
       </div>
 
       <div className="navbar-end">
-        <a href="#contact" className="hover:scale-105 transition-transform">
+        <a href="/contact" className="hover:scale-105 transition-transform">
           <GsapButton
             text="Contact"
             startColor="#ffffff"

@@ -30,7 +30,7 @@ const services = [
 ];
 
 function goToContact() {
-  window.location.hash = "contact";
+  window.location.href = "/contact";
 }
 
 export default function Services() {
@@ -40,7 +40,7 @@ export default function Services() {
         <div className="mx-auto mb-16 max-w-2xl text-center">
           <h2 className="mb-4 text-4xl font-bold text-gray-800">Services</h2>
           <p className="text-lg text-gray-600">
-            Skills are what I use. This is what you can hire me for. The projects below are the work itself.
+            Remote work for clients in any country. English throughout. Skills are what I use. This is what you can hire me for.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export default function Services() {
               <h3 className="text-2xl font-bold text-gray-800">{service.title}</h3>
               <p className="mt-3 flex-grow leading-relaxed text-gray-600">{service.line}</p>
               <div className="mt-6">
-                <a href="#contact">
+                <a href="/contact">
                   <GsapButton
                     text={service.cta}
                     startColor="#ffffff"
@@ -110,7 +110,7 @@ export default function Services() {
                 booking problem as the clinic reminder bot.
               </p>
               <div className="mt-6">
-                <a href="#contact">
+                <a href="/contact">
                   <GsapButton
                     text="Build a receptionist"
                     startColor="#ffffff"

@@ -82,8 +82,7 @@ export default function Contact() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-3 text-white">Let&apos;s Connect</h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Whether you have a project in mind, want to collaborate, or just want to say hi —
-            I&apos;d love to hear from you.
+            Clients anywhere in the world. English. A short email is enough to start.
           </p>
         </div>
 
@@ -92,7 +91,7 @@ export default function Contact() {
             <div className="card-body items-center text-center">
               <h3 className="card-title mb-2 text-white">Email Me</h3>
               <p className="mb-4 text-sm text-white/70">
-                Quickest way to get in touch
+                Works from any country
               </p>
               <GsapButton
                 text="Send Email"

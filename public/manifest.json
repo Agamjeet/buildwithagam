@@ -1,6 +1,6 @@
 {
-  "name": "Agamjeet Singh",
-  "short_name": "Agamjeet",
+  "name": "buildwithagam",
+  "short_name": "buildwithagam",
   "description": "Websites, SaaS products, AI and SaaS consultation, automation, and voice AI.",
   "start_url": "/",
   "display": "standalone",
@@ -33,7 +33,7 @@
       "sizes": "1280x720",
       "type": "image/jpeg",
       "form_factor": "wide",
-      "label": "Agamjeet Singh Padda Portfolio"
+      "label": "buildwithagam"
     }
   ]
 }

@@ -34,11 +34,12 @@ export default function Footer() {
             color="from-gray-600 to-gray-800"
           />
         </motion.div>
-        <p className="text-center text-sm text-gray-500">
-          Agamjeet Singh Padda
-          <span className="mx-2 text-gray-300" aria-hidden="true">
-            /
-          </span>
+        <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-gray-600" aria-label="Footer">
+          <a href="/" className="hover:text-gray-900">Home</a>
+          <a href="/about" className="hover:text-gray-900">About</a>
+          <a href="/services" className="hover:text-gray-900">Services</a>
+          <a href="/projects" className="hover:text-gray-900">Projects</a>
+          <a href="/contact" className="hover:text-gray-900">Contact</a>
           <a
             href={RESUME}
             target="_blank"
@@ -47,7 +48,8 @@ export default function Footer() {
           >
             Resume
           </a>
-        </p>
+        </nav>
+        <p className="text-center text-sm text-gray-500">buildwithagam · Agamjeet Singh Padda</p>
       </div>
     </footer>
   );
