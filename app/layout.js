@@ -86,8 +86,14 @@ export const metadata = {
     creator: "@Agam_io",
   },
   icons: {
-    icon: '/favi.png',
-    apple: '/favi.png',
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: "/icon-192.png",
+    shortcut: "/favicon.ico",
   },
   manifest: "/manifest.json",
   verification: {
@@ -99,7 +105,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favi.png" />
+        <link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48" />
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
         <meta name="format-detection" content="telephone=no" />
